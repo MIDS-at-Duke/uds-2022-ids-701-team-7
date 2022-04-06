@@ -22,3 +22,4 @@ for state in states:
     final = pd.merge(merge2, petroleum,  how='left', left_on=['year',], right_on = ['year'])
     final['State'] = [state]*len(final['year'])
     dataframe = pd.concat([dataframe, final])
+dataframe.to_csv('sourcePrices.csv')
